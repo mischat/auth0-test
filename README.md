@@ -109,7 +109,7 @@ This application supports displaying custom user metadata in JWT tokens. To set 
 * @param {PostLoginAPI} api - Interface whose methods can be used to change the behavior of the login.
 */
 exports.onExecutePostLogin = async (event, api) => {
-  const namespace = 'https://stake.alluvial.finance/'; // Use your own namespace URL
+  const namespace = 'https://foo.example/'; // Use your own namespace URL
   
   // Add user_metadata to the token
   if (event.user.user_metadata) {
@@ -141,7 +141,7 @@ The Profile component in this application is already configured to display custo
 2. Log back in to trigger the Action
 3. Your custom metadata will appear in the "Custom Metadata from JWT" section
 
-**Note**: Replace `https://stake.alluvial.finance/` with your own namespace URL. This doesn't need to be a real URL, just a valid URI format to avoid claim name conflicts.
+**Note**: Replace `https://foo.example/` with your own namespace URL. This doesn't need to be a real URL, just a valid URI format to avoid claim name conflicts.
 
 ### 4. Additional Auth0 Configuration
 

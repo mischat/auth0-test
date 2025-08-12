@@ -67,14 +67,14 @@ const Profile: React.FC = () => {
           <h4 style={{ margin: '0 0 10px 0', color: '#0066cc' }}>Custom Metadata from JWT</h4>
           
           {/* SMS ID from custom claim */}
-          {idToken['https://stake.alluvial.finance/user_metadata']?.sms_id && (
+          {idToken['https://foo.example/user_metadata']?.sms_id && (
             <p style={{ margin: '5px 0', fontSize: '14px' }}>
-              <strong>SMS ID:</strong> {idToken['https://stake.alluvial.finance/user_metadata'].sms_id}
+              <strong>SMS ID:</strong> {idToken['https://foo.example/user_metadata'].sms_id}
             </p>
           )}
           
           {/* Full user_metadata from custom claim */}
-          {idToken['https://stake.alluvial.finance/user_metadata'] && (
+          {idToken['https://foo.example/user_metadata'] && (
             <details style={{ marginTop: '10px' }}>
               <summary style={{ cursor: 'pointer', fontWeight: 'bold' }}>All User Metadata</summary>
               <pre style={{ 
@@ -86,7 +86,7 @@ const Profile: React.FC = () => {
                 marginTop: '5px',
                 overflow: 'auto'
               }}>
-                {JSON.stringify(idToken['https://stake.alluvial.finance/user_metadata'], null, 2)}
+                {JSON.stringify(idToken['https://foo.example/user_metadata'], null, 2)}
               </pre>
             </details>
           )}
