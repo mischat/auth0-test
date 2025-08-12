@@ -1,6 +1,50 @@
-# Getting Started with Create React App
+# Auth0 React Demo
+
+A simple React single page application with Auth0 authentication integration.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+## Features
+
+- User login/logout with Auth0
+- User profile display
+- Protected routes and content
+- TypeScript support
+- Responsive design
+
+## Setup Instructions
+
+### 1. Auth0 Configuration
+
+1. Create an Auth0 account at [https://auth0.com](https://auth0.com)
+2. Create a new Auth0 application:
+   - Go to Applications > Create Application
+   - Choose "Single Page Application"
+   - Select React as the technology
+3. Configure your Auth0 application:
+   - **Allowed Callback URLs**: `http://localhost:3000`
+   - **Allowed Logout URLs**: `http://localhost:3000`
+   - **Allowed Web Origins**: `http://localhost:3000`
+
+### 2. Environment Variables
+
+Update the `.env` file with your Auth0 configuration:
+
+```env
+REACT_APP_AUTH0_DOMAIN=your-auth0-domain.us.auth0.com
+REACT_APP_AUTH0_CLIENT_ID=your-auth0-client-id
+REACT_APP_AUTH0_CALLBACK_URL=http://localhost:3000
+```
+
+Replace:
+- `your-auth0-domain` with your Auth0 domain
+- `your-auth0-client-id` with your Auth0 application client ID
+
+### 3. Installation
+
+```bash
+npm install
+```
 
 ## Available Scripts
 
@@ -39,8 +83,34 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
+## Components
+
+- **LoginButton**: Handles user authentication
+- **LogoutButton**: Handles user logout
+- **Profile**: Displays authenticated user information
+- **Loading**: Shows loading state during authentication
+
+## Usage
+
+1. Click "Log In" to authenticate with Auth0
+2. Complete the authentication flow
+3. View your profile information
+4. Click "Log Out" to end the session
+
+## Built With
+
+- React 18
+- TypeScript
+- Auth0 React SDK
+- Create React App
+
 ## Learn More
 
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
+
+## Additional Resources
+
+- [Auth0 React Quickstart](https://auth0.com/docs/quickstart/spa/react)
+- [Auth0 React SDK Documentation](https://github.com/auth0/auth0-react)
