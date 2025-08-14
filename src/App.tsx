@@ -4,7 +4,7 @@ import LoginButton from './components/LoginButton';
 import LogoutButton from './components/LogoutButton';
 import Profile from './components/Profile';
 import Loading from './components/Loading';
-import TokenDebug from './components/TokenDebug';
+import ApiTester from './components/ApiTester';
 import './App.css';
 
 function App() {
@@ -39,7 +39,7 @@ function App() {
               <LogoutButton />
             </div>
             <Profile />
-            <TokenDebug />
+            <ApiTester />
           </div>
         )}
         
